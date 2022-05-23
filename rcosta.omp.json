@@ -1,4 +1,3 @@
-
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
@@ -56,7 +55,7 @@
           "foreground": "#100e23",
           "leading_diamond": "\uE0B6",
           "trailing_diamond": "\uE0B0",
-          "template": "{{if .SSHSession }}\uF817 {{.UserName}}@{{.HostName}} {{end}}{{if .Root}} \uf0e7 {{.UserName}} {{else}}{{.HostName}} \uf2be {{end}}"
+          "template": "{{if .SSHSession }}\uF817 {{.UserName}}@{{.HostName}}{{else}} {{if .Root}} \uf0e7 {{.UserName}} {{else}}{{.HostName}} \uf2be {{end}}{{end}}"
         },
 
         {

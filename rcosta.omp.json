@@ -28,7 +28,7 @@
           "type": "session"
         },
         {
-          "background": "#9249B0",
+          "background": "#F400FF",
           "foreground": "#100e23",
           "powerline_symbol": "\ue0b0",
           "properties": {
@@ -47,14 +47,6 @@
           "type": "path"
         },
         {
-          "background": "#3feb56",
-          "foreground": "#193549",
-          "powerline_symbol": "\ue0b0",
-          "style": "powerline",
-          "template": " {{ .HEAD }} ",
-          "type": "git"
-        },
-        {
           "background": "#906cff",
           "foreground": "#100e23",
           "powerline_symbol": "\ue0b0",
@@ -69,7 +61,7 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "#9249B0",
+          "background": "#F400FF",
           "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",

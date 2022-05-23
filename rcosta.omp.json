@@ -28,8 +28,8 @@
           "type": "session"
         },
         {
-          "background": "#F400FF",
-          "foreground": "#100e23",
+          "background": "#4c1f5e",
+          "foreground": "#EFDCF9",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "folder_icon": "\ue5ff",
@@ -61,8 +61,8 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "#F400FF",
-          "foreground": "#000000",
+          "background": "#4c1f5e",
+          "foreground": "#EFDCF9",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
           "template": " \ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",

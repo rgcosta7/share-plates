@@ -1,96 +1,152 @@
+
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
       "alignment": "left",
       "segments": [
+
+        {
+          "type": "exit",
+          "style": "diamond",
+          "foreground": "#FFFFFF",
+          "background": "#B7EBB9",
+          "background_templates": [
+              "{{ if gt .Code 0 }}#e91e63{{ end }}"
+          ],
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "template": "<#193549>\uE23A</>",
+          "properties": {
+              "always_enabled": true
+          }
+        },
+
+        {
+          "foreground": "#000000",
+          "style": "plain",
+          "template": ". ",
+          "type": "text"
+        },
+
         {
           "type": "os",
-          "style": "powerline",
-          "background": "#cfcfc4",
+          "style": "diamond",
+          "background": "#F6AC0D",
           "foreground": "#100e23",
+          "leading_diamond": "\ue0b6",
           "properties": {
-            "macos": "mac"
+            "arch": "\uf303",
+            "debian": "\uf306",
+            "fedora": "\uf30a",
+            "linux": "\uf17c",
+            "macos": "\uf179",
+            "manjaro": "\uf312",
+            "opensuse": "\uf314",
+            "ubuntu": "\uf31b",
+            "windows": "\uf17a"
           },
-          "template": " {{.Icon}}{{ if .WSL }} WSL -{{ end }} "
+          "template": " {{.Icon}} {{ if .WSL }}WSL{{ end }} "
         },
+
         {
-          "background": "#cfcfc4",
-          "background_templates": [
-            "{{if .Root}}#ff3026{{else}}#cfcfc4{{end}}"
-          ],
-          "foreground": "#100e23",
-          "properties": {
-            "display_host": true
-          },
+          "type": "session",          
           "style": "powerline",
-          "template": "{{if .Root}} \uf0e7 {{.UserName}} {{else}} {{.UserName}} @ {{.HostName}} \uf2be {{end}}",
-          "type": "session"
+          "background": "#F6AC0D",
+          "foreground": "#100e23",
+          "leading_diamond": "\uE0B6",
+          "trailing_diamond": "\uE0B0",
+          "template": "{{if .SSHSession }}\uF817 {{.UserName}}@{{.HostName}} {{end}}{{if .Root}} \uf0e7 {{.UserName}} {{else}}{{.HostName}} \uf2be {{end}}"
         },
+
         {
-          "background": "#4c1f5e",
-          "foreground": "#EFDCF9",
+          "type": "path",
+          "style": "powerline",
           "powerline_symbol": "\ue0b0",
+          "background": "#04C1E1",
+          "foreground": "#ffffff",
           "properties": {
-            "folder_icon": "\ue5ff",
-            "folder_separator_icon": "\ue0b9",
+            "folder_separator_icon": "/",
+            "style": "folder",
             "home_icon": "\uf7db",
             "mapped_locations": {
-              "C:\\Users": "\uf007",
-              "C:\\Windows": "\ue62a"
-            },
-            "mixed_threshold": 8,
-            "style": "mixed"
+              "C:\\Users": "\uf007 Users",
+              "C:\\Windows": "\ue62a Windows"
+            }
           },
-          "style": "powerline",
-          "template": " {{ path .Path .Location }} ",
-          "type": "path"
-        },
-        {
-          "background": "#906cff",
-          "foreground": "#100e23",
-          "powerline_symbol": "\ue0b0",
-          "style": "powerline",
-          "template": " \ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
-          "type": "python"
+          "template": " \ue5ff  {{ .Path }} "
         }
+
       ],
       "type": "prompt"
     },
+
+
     {
       "alignment": "right",
       "segments": [
         {
-          "background": "#4c1f5e",
-          "foreground": "#EFDCF9",
-          "powerline_symbol": "\ue0b0",
-          "style": "powerline",
-          "template": " \ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",
-          "type": "kubectl"
-        },
-        {
-          "background": "#ff4040",
+
+          "type": "kubectl",
+          "style": "diamond",
+
+          "background": "#04C1E1",
           "foreground": "#ffffff",
-          "leading_diamond": "\ue0c2",
-          "style": "diamond",
-          "template": " \ue70f ",
-          "trailing_diamond": "\ue0c0",
-          "type": "exit"
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",          
+          "template": "\ufd31 {{if .Namespace}}{{.Namespace}}{{else}}default{{end}}"
         },
+
         {
-          "background": "#2f2f2f",
-          "foreground": "#fafafa",
-          "leading_diamond": "\ue0b2",
-          "properties": {
-            "style": "austin"
-          },
+          "foreground": "#000000",
+          "style": "plain",
+          "template": ". ",
+          "type": "text"
+        },
+
+        {
+         "type": "time",
           "style": "diamond",
-          "template": " {{ .FormattedMs }} ",
-          "type": "executiontime"
+          "background": "#F6AC0D",
+          "foreground": "#000000",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "properties": {
+              "time_format": "15:04"
+          },
+          "template": "\uf49b {{ .CurrentDate | date .Format }}"
         }
       ],
-      "type": "rprompt"
+      "type": "prompt"
+    },
+
+
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#ff0000",
+          "style": "plain",
+          "template": "\ue00a ",
+          "type": "root"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": " {{ .Name }} ",
+          "type": "shell"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": "\uf054 ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
     }
+
   ],
   "console_title_template": "{{if .Root}} \u26a1 {{end}}{{.UserName}} \u2794 📁{{.Folder}}",
   "final_space": true,

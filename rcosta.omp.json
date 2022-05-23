@@ -28,7 +28,7 @@
           "type": "session"
         },
         {
-          "background": "#A270B6",
+          "background": "#9249B0",
           "foreground": "#100e23",
           "powerline_symbol": "\ue0b0",
           "properties": {
@@ -69,7 +69,7 @@
       "alignment": "right",
       "segments": [
         {
-          "background": "#A270B6",
+          "background": "#9249B0",
           "foreground": "#000000",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",

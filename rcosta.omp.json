@@ -55,7 +55,7 @@
           "foreground": "#100e23",
           "leading_diamond": "\uE0B6",
           "trailing_diamond": "\uE0B0",
-          "template": "{{if .SSHSession }}\uF817 {{.UserName}}@{{.HostName}}{{else}} {{if .Root}} \uf0e7 {{.UserName}} {{else}}{{.HostName}} \uf2be {{end}}{{end}}"
+          "template": "{{if .SSHSession }}\uF817 {{.UserName}}@{{.HostName}} {{else}} {{if .Root}} \uf0e7 {{.UserName}} {{else}}{{.HostName}} \uf2be {{end}}{{end}}"
         },
 
         {
@@ -67,7 +67,7 @@
           "properties": {
             "folder_separator_icon": "/",
             "style": "folder",
-            "home_icon": "\uf7db",
+            "home_icon": "\uf7db Home",
             "mapped_locations": {
               "C:\\Users": "\uf007 Users",
               "C:\\Windows": "\ue62a Windows"
@@ -85,7 +85,15 @@
       "alignment": "right",
       "segments": [
         {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#100e23",
+          "background": "#906cff",
+          "template": " \uE235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}"
+        },
 
+        {
           "type": "kubectl",
           "style": "diamond",
 
@@ -104,6 +112,24 @@
         },
 
         {
+          "type": "owm",
+          "style": "diamond",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#000000",
+          "background": "#F6AC0D",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",          
+          "template": "{{.Weather}} ({{.Temperature}}{{.UnitIcon}}) ",
+          "properties": {
+            "apikey": "4a5a063b126ec82729c1fbfe4e1cb628",
+            "location": "EDINBURGH,GB",
+            "units": "metric",
+            "http_timeout": 400,
+            "cache_timeout": 15
+          }
+        },
+
+        {
          "type": "time",
           "style": "diamond",
           "background": "#F6AC0D",
@@ -111,10 +137,16 @@
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4",
           "properties": {
-              "time_format": "15:04"
+              "time_format": "15:04 "
           },
           "template": "\uf49b {{ .CurrentDate | date .Format }}"
-        }
+        },
+        {
+          "foreground": "#000000",
+          "style": "plain",
+          "template": ". ",
+          "type": "text"
+        }       
       ],
       "type": "prompt"
     },

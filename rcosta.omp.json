@@ -137,7 +137,7 @@
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4",
           "properties": {
-              "time_format": "15:04 "
+              "time_format": "15:04"
           },
           "template": "\uf49b {{ .CurrentDate | date .Format }}"
         },

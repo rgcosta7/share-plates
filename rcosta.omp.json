@@ -15,7 +15,7 @@
           ],
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4",
-          "template": "<#193549>\uE23A</>",
+          "template": "<#193549>\uf7d0</>",
           "properties": {
               "always_enabled": true
           }
@@ -24,7 +24,7 @@
         {
           "foreground": "#000000",
           "style": "plain",
-          "template": ". ",
+          "template": ".",
           "type": "text"
         },
 
@@ -55,9 +55,8 @@
           "foreground": "#100e23",
           "leading_diamond": "\uE0B6",
           "trailing_diamond": "\uE0B0",
-          "template": "{{if .SSHSession }}\uF817 {{.UserName}}@{{.HostName}} {{else}} {{if .Root}} \uf0e7 {{.UserName}} {{else}}{{.HostName}} \uf2be {{end}}{{end}}"
+          "template": "{{if .SSHSession }}\uF817 {{.UserName}}@{{.HostName}} {{else}} {{if .Root}} \uf0e7 {{.UserName}}@{{.HostName}} {{else}}{{.HostName}} \uf2be {{end}}{{end}}"
         },
-
         {
           "type": "path",
           "style": "powerline",
@@ -85,29 +84,35 @@
       "alignment": "right",
       "segments": [
         {
-          "type": "python",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
-          "foreground": "#100e23",
-          "background": "#906cff",
-          "template": " \uE235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}"
-        },
-
-        {
           "type": "kubectl",
           "style": "diamond",
-
           "background": "#04C1E1",
           "foreground": "#ffffff",
           "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",          
+          "trailing_diamond": "\ue0b4",   
+          "properties": {
+            "display_error": "true"
+          },                 
           "template": "\ufd31 {{if .Namespace}}{{.Namespace}}{{else}}default{{end}}"
         },
 
         {
-          "foreground": "#000000",
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#906cff",
+          "properties": {
+            "display_mode": "always"
+          },          
+          "template": " \uE235 {{ .Full }} "
+        },
+
+        {
+          "foreground": "#1F212A",
+          "background": "#1F212A",
           "style": "plain",
-          "template": ". ",
+          "template": ".",
           "type": "text"
         },
 
@@ -119,7 +124,7 @@
           "background": "#F6AC0D",
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0b4",          
-          "template": "{{.Weather}} ({{.Temperature}}{{.UnitIcon}}) ",
+          "template": "{{.Weather}} ({{.Temperature}}{{.UnitIcon}})",
           "properties": {
             "apikey": "4a5a063b126ec82729c1fbfe4e1cb628",
             "location": "EDINBURGH,GB",
@@ -140,13 +145,7 @@
               "time_format": "15:04"
           },
           "template": "\uf49b {{ .CurrentDate | date .Format }}"
-        },
-        {
-          "foreground": "#000000",
-          "style": "plain",
-          "template": ". ",
-          "type": "text"
-        }       
+        }      
       ],
       "type": "prompt"
     },

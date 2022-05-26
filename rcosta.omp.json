@@ -158,7 +158,7 @@
         {
           "foreground": "#ff0000",
           "style": "plain",
-          "template": "\ue00a ",
+          "template": " \uf071",
           "type": "root"
         },
         {

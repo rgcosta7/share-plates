@@ -83,18 +83,7 @@
     {
       "alignment": "right",
       "segments": [
-        {
-          "type": "kubectl",
-          "style": "diamond",
-          "background": "#04C1E1",
-          "foreground": "#ffffff",
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",   
-          "properties": {
-            "display_error": "true"
-          },                 
-          "template": "\ufd31 {{if .Namespace}}{{.Namespace}}{{else}}default{{end}}"
-        },
+
 
         {
           "type": "python",

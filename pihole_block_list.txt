@@ -1,0 +1,76 @@
+# Amazon Ads and Analytics
+analytics.s3.amazonaws.com
+adtago.s3.amazonaws.com
+analyticsengine.s3.amazonaws.com
+advice-ads.s3.amazonaws.com
+advertising-api-eu.amazon.com
+# Google AdWords, AdSense and Analytics
+afs.googlesyndication.com
+pagead2.googleadservices.com
+adservice.google.com
+pagead2.googlesyndication.com
+# Doubleclick.net
+stats.g.doubleclick.net
+ad.doubleclick.net
+static.doubleclick.net
+mediavisor.doubleclick.net
+m.doubleclick.net
+# Hotjar
+identify.hotjar.com
+adm.hotjar.com
+insights.hotjar.com
+script.hotjar.com
+surveys.hotjar.com
+careers.hotjar.com
+events.hotjar.io
+# Pinterest Trackers
+ads.pinterest.com
+log.pinterest.com
+analytics.pinterest.com
+trk.pinterest.com
+widgets.pinterest.com
+#  TikTok Trackers
+ads-api.tiktok.com
+analytics.tiktok.com
+ads-sg.tiktok.com
+analytics-sg.tiktok.com
+business-api.tiktok.com
+ads.tiktok.com
+log.byteoversea.com
+# Yahoo Ads and Analytics
+ads.yahoo.com
+analytics.yahoo.com
+geo.yahoo.com
+udc.yahoo.com
+advertising.yahoo.com
+udcm.yahoo.com
+partnerads.ysm.yahoo.com
+log.fc.yahoo.com
+gemini.yahoo.com
+adtech.yahooinc.com
+# Yandex Ads and Analytics
+extmaps-api.yandex.net
+appmetrica.yandex.ru
+adfstat.yandex.ru
+metrika.yandex.ru
+advertising.yandex.ru
+offerwall.yandex.net
+adfox.yandex.ru
+# Apple Ads and Analytics
+advertising.apple.com
+tr.iadsdk.apple.com
+metrics.mzstatic.com
+books-analytics-events.apple.com
+api-adservices.apple.com
+metrics.icloud.com
+metrics.apple.com
+notes-analytics-events.apple.com
+# All Other
+cdn.mouseflow.com
+o2.mouseflow.com
+gtm.mouseflow.com
+tools.mouseflow.com
+cdn-test.mouseflow.com
+freshmarketer.com
+claritybt.freshmarketer.com
+fwtracks.freshmarketer.com

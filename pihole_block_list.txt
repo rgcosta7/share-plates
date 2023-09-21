@@ -108,3 +108,11 @@
 0.0.0.0 click.oneplus.cn
 0.0.0.0 open.oneplus.net
 0.0.0.0 femetrics.grammarly.io
+0.0.0.0 amazon-adsystem.com
+0.0.0.0 aax-us-west.amazon-adsystem.com
+0.0.0.0 aax-us-east.amazon-adsystem.com
+0.0.0.0 c.amazon-adsystem.com
+0.0.0.0 s.amazon-adsystem.com
+0.0.0.0 assoc-na.associates-amazon.com
+0.0.0.0 unagi.amazon.com
+0.0.0.0 unagi-na.amazon.com

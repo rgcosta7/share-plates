@@ -116,3 +116,7 @@
 0.0.0.0 assoc-na.associates-amazon.com
 0.0.0.0 unagi.amazon.com
 0.0.0.0 unagi-na.amazon.com
+# others (tvs)
+0.0.0.0 ueiwsp.com
+0.0.0.0 mediaservices.cdn-apple.com	
+

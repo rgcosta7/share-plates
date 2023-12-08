@@ -1,56 +1,76 @@
+
 <!DOCTYPE html>
-
-<html
- 
-lang="en">
-
+<html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
 
-    
-<meta
- 
-charset="UTF-8">
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    
-<meta
- 
-name="viewport"
- 
-content="width=device-width, initial-scale=1.0">
+}
+.bgimg-1 {
+  background-image: url("communication-antennas.jpg");
+  height: 100%;
+}
 
-    
-<title>Satscot - Communication Antennas</title>
-    <style>
-        body {
-            background-image: url('communication-antennas.jpg') no-repeat center center fixed; ;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
 
-        #logo {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100px;
-            height: 100px;
-            background-image: url('satscot.png');
-            background-size: cover;
-        }
-    </style>
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+</style>
 </head>
 <body>
-    <div id="logo"></div>
 
-    <h1>Satscot - Communication Antennas</h1>
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">FULL PAGE</span><br>
+    <span class="border">BACKGROUND IMAGE</span>
+  </div>
+</div>
+<h1></h1>
+ 
+<h1>Satscot - Communication Antennas</h1>
 
-    <p>We are a leading provider of communication antennas and related services. We offer a wide range of products and solutions for a variety of applications, including cellular, Wi-Fi, satellite, and military communications.</p>
+<p>We are a leading provider of communication antennas and related services. We offer a wide range of products and solutions for a variety of applications, including cellular, Wi-Fi, satellite, and military communications.</p>
 
-    <p>Our antennas are designed to provide high performance and reliability in harsh environments. We use only the highest quality materials and components in our products, and we offer a wide range of customization options to meet the specific needs of our customers.</p>
+<p>Our antennas are designed to provide high performance and reliability in harsh environments. We use only the highest quality materials and components in our products, and we offer a wide range of customization options to meet the specific needs of our customers.</p>
 
-    <p>We are committed to providing our customers with the best possible service. We have a team of experienced engineers and technicians who are dedicated to helping our customers achieve their communication goals.</p>
+<p>We are committed to providing our customers with the best possible service. We have a team of experienced engineers and technicians who are dedicated to helping our customers achieve their communication goals.</p>
 
-    <p>Contact us today to learn more about our products and services.</p>
+<p>Contact us today to learn more about our products and services.</p>
+
+ 
+<p style="padding:5px 15px">This example creates a full page background image. Try to resize the browser window to see how it always will cover the full screen (when scrolled to top), and that it scales nicely on all screen sizes.</p>
+
 </body>
 </html>
